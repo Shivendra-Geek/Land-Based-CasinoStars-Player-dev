@@ -1,0 +1,25 @@
+.providers {
+    margin-bottom: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem);
+
+    .providers_wp {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: clamp(0.6875rem, 0.5125rem + 0.875vw, 1.5625rem);
+
+        @media (width > 1920px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (width < 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (width < 575px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (width < 380px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

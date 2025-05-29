@@ -1,0 +1,105 @@
+.header {
+    --_header-x-padding: clamp(0.9375rem, 0.75rem + 0.9375vw, 1.875rem);
+    padding: 0 var(--_header-x-padding);
+    height: var(--header-height);
+    background: var(--black-600);
+    color: var(--white-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: var(--transition-normal);
+    z-index: var(--header-z-index);
+    border-bottom: 0.0625rem solid var(--border-100);
+
+    @media (width < 1600px) {
+        @include flex(column, unset, space-between);
+        padding: 0;
+    }
+
+    @media (width < 992px) {
+        position: relative;
+        @include flex(column, unset, flex-start);
+    }
+
+    //     &.hidden {
+    //         top: -100%;
+
+    //         @media (width < 992px) {
+    //             top: 0;
+    //         }
+    //     }
+
+    .header_top {
+        @media (width < 1600px) {
+            border-bottom: 0.0625rem solid var(--border-100);
+            padding: 0.75rem 0;
+        }
+
+        @media (width < 575px) {
+            padding: 0.5rem 0;
+        }
+    }
+
+    .header_center {
+        @include flex(row, center, space-between);
+        height: 100%;
+
+        @media (width < 1600px) {
+            height: auto;
+            padding-bottom: 0.75rem;
+        }
+
+        @media (width < 992px) {
+            padding-top: 0.625rem;
+            padding-bottom: 0.625rem;
+        }
+
+        @media (width < 575px) {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        @media (width < 480px) {
+            padding-top: 0.625rem;
+            padding-bottom: 0.625rem;
+        }
+    }
+
+    .header_top,
+    .header_center {
+        @media (width < 1600px) {
+            padding-left: var(--_header-x-padding);
+            padding-right: var(--_header-x-padding);
+        }
+    }
+
+    .header_bottom {
+        @media (width < 992px) {
+            @include flex(row, center, center, wrap, clamp(0.75rem, 0.3929rem + 1.7857vw, 1.25rem));
+        }
+    }
+
+    .left_content,
+    .right_content {
+        @include inline-flex(row, center, center, nowrap);
+    }
+
+    .left_content {
+        gap: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
+    }
+
+    .right_content {
+        gap: clamp(0.625rem, 0.5rem + 0.625vw, 1.25rem);
+
+        // @media (width < 480px) {
+        //      gap: 20px;
+        // }
+    }
+
+    .divider {
+        height: 3.125rem;
+        width: 0.0625rem;
+        background: var(--border-200);
+    }
+}

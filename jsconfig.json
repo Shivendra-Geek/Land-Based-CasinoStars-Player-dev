@@ -1,0 +1,24 @@
+{
+     "compilerOptions": {
+          "paths": {
+               // src
+               "@/*": ["./src/*"],
+
+               //  styles
+               "@/components/*": ["./src/components/*"],
+
+               //  styles
+               "@/styles/*": ["./src/styles/*"],
+
+               //  hooks
+               "@/hooks/*": ["./src/hooks/*"],
+
+               //  lib
+               "@/lib/*": ["./src/lib/*"],
+
+               
+               //  lib
+               "@/images/*": ["./public/images/*"]
+          }
+     }
+}

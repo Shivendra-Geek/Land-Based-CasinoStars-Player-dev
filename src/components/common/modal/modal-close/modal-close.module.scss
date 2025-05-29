@@ -1,0 +1,19 @@
+.modal_close {
+     position: absolute;
+     top: 1.25rem;
+     right: 1.25rem;
+
+     img {
+          --_size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+          height: var(--_size);
+          width: var(--_size);
+          opacity: 0.3;
+          transition: var(--transition-fast);
+     }
+
+     &:hover {
+          img {
+               opacity: 1;
+          }
+     }
+}

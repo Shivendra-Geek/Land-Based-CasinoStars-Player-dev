@@ -1,0 +1,84 @@
+.game_modal {
+    :global(.mantine-Modal-body) {
+        padding: 0;
+        height: 100%;
+    }
+
+    .iframe_wp {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .modal_header {
+            @include flex(row, center, space-between, wrap, 1rem);
+            padding: 0.625rem 0.75rem;
+            border-bottom: 1px solid var(--primary-light);
+            box-shadow:
+                rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .game_info {
+            @include inline-flex(row, flex-start, center, wrap, 1rem);
+
+            .game_name {
+                font-size: var(--fs-sm);
+                @include inline-flex(row, center, center, wrap, 8px);
+            }
+
+            .game_extra_info {
+                @include inline-flex(row, center, center, wrap, 1rem);
+
+                button {
+                    font-size: var(--fs-xs);
+                    text-transform: capitalize !important;
+                    opacity: 0.5;
+                    transition: var(--transition-fast);
+                    text-decoration: none;
+                    @include inline-flex(row, center, center, wrap, 6px);
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .action_btns {
+            @include inline-flex(row, center, center, wrap, 0.625rem);
+
+            .btn {
+                --btn-size: 2rem;
+                height: var(--btn-size);
+                width: var(--btn-size);
+                border-radius: var(--radius-full);
+                display: grid;
+                place-items: center;
+                background: var(--black-500);
+                transition: var(--transition-fast);
+
+                &:hover {
+                    background: var(--black-400);
+                }
+
+                // @media (width < 480px) {
+                //     --btn-size: 1.875rem;
+                // }
+            }
+        }
+
+        iframe {
+            border: unset;
+            height: 100%;
+            flex: 1;
+        }
+    }
+
+    .iframe_box {
+        background: var(--black-800);
+        display: grid;
+        place-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}

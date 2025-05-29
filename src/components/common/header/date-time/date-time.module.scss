@@ -1,0 +1,33 @@
+.date_time {
+     line-height: 1;
+
+     ul {
+          @include inline-flex(row, center, center, nowrap, 1rem);
+
+          @media (width < 1600px) {
+               width: 100%;
+
+               li:has(.date) {
+                    margin-left: auto;
+               }
+          }
+
+          .item {
+               @include inline-flex(row, center, center, nowrap, 0.5rem);
+
+               span {
+                    font-size: var(--fs-xs);
+                    margin-top: 0.125rem;
+               }
+          }
+
+          .status {
+               --_status-size: clamp(0.9375rem, 0.875rem + 0.3125vw, 1.25rem);
+               height: var(--_status-size);
+               width: var(--_status-size);
+               border-radius: var(--radius-full);
+               background: #4ad120;
+               margin-top: -0.3125rem;
+          }
+     }
+}

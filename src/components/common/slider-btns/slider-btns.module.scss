@@ -1,0 +1,39 @@
+.slider_btn_wp {
+     position: relative;
+
+     .slider_btn {
+          .btn {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               z-index: 20;
+
+               &.next {
+                    right: 0;
+               }
+
+               button {
+                    background: var(--white-color);
+                    color: var(--black-color);
+                    height: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem);
+                    width: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem);
+                    border-radius: var(--radius-full);
+                    @include flex(row, center, center);
+                    box-shadow:
+                         rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                         rgba(17, 17, 26, 0.1) 0px 16px 56px,
+                         rgba(17, 17, 26, 0.1) 0px 24px 80px;
+               }
+          }
+
+          @media (width < 992px) {
+               @include flex(row, center, center, nowrap, 1.25rem);
+               margin-top: 1.875rem;
+
+               .btn {
+                    all: unset !important;
+                    position: relative;
+               }
+          }
+     }
+}

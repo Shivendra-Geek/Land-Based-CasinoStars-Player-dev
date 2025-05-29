@@ -1,0 +1,56 @@
+.container {
+    padding: 1rem 0 0 0;
+    background-color: var(--white-color);
+    border-radius: var(--radius-md);
+    font-family: sans-serif;
+    border: 1px solid var(--border-200);
+    overflow: hidden;
+    background: var(--black-600);
+
+    :global(.mantine-Stack-root) {
+        gap: 0 !important;
+    }
+
+    .checkbox {
+        pointer-events: none;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    
+}
+
+.headerCell {
+    flex: 1;
+    min-width: 120px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    background: var(--black-700);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    &:nth-child(odd) {
+        border-top: 1px solid var(--border-200);
+        border-bottom: 1px solid var(--border-200);
+    }
+}
+
+.cell {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .bar {
+        flex: 1;
+    }
+}

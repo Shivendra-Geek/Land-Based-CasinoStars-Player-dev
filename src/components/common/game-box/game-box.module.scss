@@ -1,0 +1,104 @@
+.game_box {
+    cursor: pointer;
+    transition: var(--transition-fast);
+
+    .box_image {
+        position: relative;
+        padding: 0 1.25rem;
+        margin-bottom: -60px;
+        z-index: 10;
+        transition: var(--transition-fast);
+
+        @media (width < 992px) {
+            margin: 0;
+            padding: 0;
+        }
+
+        .image {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(270deg, #be8f5f 0%, #ffe69e 100%);
+            z-index: 1;
+            aspect-ratio: 1/0.69;
+            overflow: hidden;
+            padding: 2px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                inset: 2px;
+                background: var(--black-600);
+                z-index: -1;
+            }
+
+            &,
+            &::before,
+            & img {
+                border-radius: var(--radius-lg);
+
+                @media (width < 992px) {
+                    border-radius: var(--radius-md);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .box_content {
+        position: relative;
+        background: linear-gradient(270deg, #be8f5f 0%, #ffe69e 100%);
+        padding: 18px;
+        overflow: hidden;
+        z-index: 1;
+        height: 160px;
+        @include flex(column, center, flex-end);
+
+        .title {
+            font-size: var(--fs-md);
+            font-weight: 700;
+            margin-bottom: 0.625rem;
+            text-align: center;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            width: 100%;
+        }
+
+        .provider_name {
+            font-size: var(--fs-base);
+            text-transform: uppercase;
+            opacity: 0.5;
+            letter-spacing: 0.4px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            inset: 2px;
+            background: var(--black-600);
+            z-index: -1;
+        }
+
+        &,
+        &::before {
+            border-radius: var(--radius-lg);
+        }
+
+        @media (width < 992px) {
+            display: none;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+}

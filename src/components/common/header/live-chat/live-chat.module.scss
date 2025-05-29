@@ -1,0 +1,19 @@
+.live_chat {
+    @media (width < 768px) {
+        height: var(--element-height-sm) !important;
+    }
+
+    @media (width < 480px) {
+        height: var(--element-height-es) !important;
+        //    width: var(--element-height-es) !important;
+        //    border: 1px solid var(--border-200);
+        //    border-radius: var(--radius-full);
+        //    @include flex(row, center, center);
+
+        //    img {
+        //        --_icon-size: 22px;
+        //        height: var(--_icon-size);
+        //        width: var(--_icon-size);
+        //    }
+    }
+}

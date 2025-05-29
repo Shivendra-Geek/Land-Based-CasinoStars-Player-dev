@@ -1,0 +1,4 @@
+.support_btn_wp {
+    @include inline-flex(row, center, center, wrap, 1rem);
+    line-height: 1;
+}

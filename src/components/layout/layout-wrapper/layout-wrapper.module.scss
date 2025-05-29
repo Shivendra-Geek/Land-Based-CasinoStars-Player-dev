@@ -1,0 +1,11 @@
+.layout_wp {
+    padding-top: var(--header-height);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+
+    @media (width < 992px) {
+        padding-bottom: calc(var(--menubar-height) + var(--footer-mobile-height) + 1rem);
+        padding-top: 0;
+    }
+}

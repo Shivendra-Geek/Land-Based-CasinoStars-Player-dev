@@ -1,0 +1,29 @@
+.date_filter {
+     @include inline-flex(row, center, center, nowrap, 0.625rem);
+
+     @media (width < 480px) {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+     }
+
+     .label {
+          font-size: var(--fs-base);
+          font-weight: 500;
+     }
+
+     .date_picker {
+          width: 10.625rem;
+     }
+
+     .time_input {
+          width: 8.75rem;
+     }
+
+     .date_picker,
+     .time_input {
+          @media (width < 480px) {
+               width: 100%;
+          }
+     }
+}

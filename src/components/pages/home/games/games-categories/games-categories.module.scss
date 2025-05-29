@@ -1,0 +1,49 @@
+.games_categories {
+    margin-bottom: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem);
+    background: var(--black-600);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem clamp(0rem, -1.125rem + 5.625vw, 5.625rem);
+
+    .slider {
+        position: relative;
+
+        .search {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 9;
+            background: var(--black-600);
+            height: 100%;
+
+            .element_box {
+                height: 100%;
+                border-left: unset;
+            }
+        }
+    }
+
+    .element_box {
+        @include flex(column, center, center, nowrap, 1.25rem);
+        width: 100%;
+        border-left: 1px solid var(--border-200);
+
+        .element_title {
+            font-size: var(--fs-base);
+            font-weight: 700;
+        }
+
+        .element_img,
+        .element_title {
+            opacity: 0.6;
+            transition: var(--transition-normal);
+        }
+
+        &:hover,
+        &:active {
+            .element_img,
+            .element_title {
+                opacity: 1;
+            }
+        }
+    }
+}

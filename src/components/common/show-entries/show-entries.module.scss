@@ -1,0 +1,14 @@
+.show_entries {
+    @include inline-flex(row, center, center, nowrap, 0.625rem);
+
+    .user_select {
+        width: 120px;
+    }
+
+    .text {
+        font-size: var(--fs-sm);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}

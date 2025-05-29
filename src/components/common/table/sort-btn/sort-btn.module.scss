@@ -1,0 +1,23 @@
+.sort_btn {
+     @include inline-flex(row, center, space-between, nowrap, 0.25rem);
+     --_left-spacing: 0.75rem;
+     padding: 0.375rem 0.5rem 0.375rem var(--_left-spacing);
+     background: transparent;
+     border-radius: 0.375rem;
+     width: 100%;
+     transition: var(--transition-fast);
+     margin-left: calc(var(--_left-spacing) * -1);
+     min-width: 140px;
+
+     .icon {
+          flex-shrink: 0;
+      }
+
+     span {
+          line-height: 1;
+     }
+
+     &:hover {
+          background: var(--border-100);
+     }
+}

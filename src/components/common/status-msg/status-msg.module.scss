@@ -1,0 +1,26 @@
+.status_msg {
+    padding: 24px;
+    @include flex(row, center, center, wrap, 12px);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(270deg, #be8f5f 0%, #ffe69e 100%);
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        inset: 2;
+        background: var(--black-600);
+        content: '';
+        z-index: -1;
+    }
+
+    &,
+    &::before {
+        border-radius: calc(var(--radius-md));
+    }
+
+    span {
+        font-weight: 500;
+        
+    }
+}

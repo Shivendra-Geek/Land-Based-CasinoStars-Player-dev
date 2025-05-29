@@ -1,0 +1,13 @@
+.action_btn {
+    --_size: 60px;
+    height: var(--_size);
+    width: var(--_size);
+    border-radius: var(--radius-full);
+    background: var(--primary-dark);
+    display: grid;
+    place-items: center;
+    box-shadow:
+        rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}

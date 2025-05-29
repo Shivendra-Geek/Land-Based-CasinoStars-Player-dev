@@ -1,0 +1,25 @@
+.support_content {
+    padding: 1.5625rem clamp(0rem, -0.675rem + 3.375vw, 3.375rem);
+
+    @include flex(column, center, center);
+
+    .title {
+        font-size: var(--fs-lg);
+        font-weight: 700;
+        line-height: 141.667%;
+        margin-bottom: 1.875rem;
+        text-align: center;
+    }
+
+    .tabs_wp {
+        margin-bottom: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+    }
+
+    .action_btns {
+        @include inline-flex(row, center, center, wrap, clamp(0.75rem, 0.525rem + 1.125vw, 1.875rem));
+
+        button {
+            width: 132px;
+        }
+    }
+}

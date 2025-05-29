@@ -1,0 +1,22 @@
+.all_games {
+    --_column: 5;
+
+    display: grid;
+    grid-template-columns: repeat(var(--_column), 1fr);
+    row-gap: 1.875rem;
+    column-gap: 1.5rem;
+
+    @media (width < 1400px) {
+        --_column: 4;
+    }
+
+    @media (width < 992px) {
+        --_column: 3;
+        row-gap: 1.375rem;
+        column-gap: 1.25rem;
+    }
+
+    @media (width < 575px) {
+        --_column: 2;
+    }
+}

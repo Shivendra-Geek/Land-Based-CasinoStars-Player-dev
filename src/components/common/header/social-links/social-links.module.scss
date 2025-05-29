@@ -1,0 +1,34 @@
+.navbar {
+     .nav_links {
+          @include inline-flex(row, center, center, nowrap, 1.5rem);
+
+          .link {
+               height: 3.125rem;
+               width: 3.125rem;
+               border-radius: var(--radius-full);
+               @include inline-flex(row, center, center, nowrap, 1.5rem);
+               position: relative;
+               z-index: 0;
+               background: var(--black-700);
+               box-shadow: 0rem 0.25rem 1.875rem -0.0625rem rgba(0, 0, 0, 0.5);
+
+               @media (width < 768px) {
+                    height: 2.5rem;
+                    width: 2.5rem;
+               }
+
+               @media (width < 575px) {
+                    height: 2.25rem;
+                    width: 2.25rem;
+               }
+
+               &.whatsapp {
+                    background: #4ccc5c;
+
+                    &:hover {
+                         background: #62d270;
+                    }
+               }
+          }
+     }
+}

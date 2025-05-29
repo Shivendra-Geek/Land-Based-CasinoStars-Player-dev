@@ -1,0 +1,42 @@
+.footer {
+    text-align: center;
+    padding-bottom: clamp(1.25rem, -0.0862rem + 2.1552vw, 2.5rem);
+    margin-top: auto;
+
+    p {
+        font-size: var(--fs-base);
+    }
+
+    @media (width < 1200px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: var(--footer-mobile-height);
+        background: var(--black-600);
+        z-index: 999;
+        padding: 0;
+        @include flex(row, center, center);
+        z-index: var(--mobile-bar-z-index);
+
+        p {
+            font-size: var(--fs-xs);
+        }
+    }
+
+    @media (width < 480px) {
+        p {
+            font-size: var(--fs-xxs);
+        }
+    }
+}
+
+:global(.casino_starts_layout) {
+    + .footer {
+        padding-bottom: var(--content-padding);
+
+        @media (width < 1200px) {
+            padding-bottom: 0;
+        }
+    }
+}

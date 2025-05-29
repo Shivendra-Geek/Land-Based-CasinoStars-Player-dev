@@ -1,0 +1,103 @@
+:root {
+    // primary color
+    --primary-light: #ffe69e;
+    --primary-dark: #be8f5f;
+    --primary-hover-dark: #c6ad7e;
+
+    // background color
+    --black-900: #0a0a0a;
+    --black-800: #1e1e1e;
+    --black-700: #262626;
+    --black-600: #313131;
+    --black-500: #404040;
+    --black-400: #494949;
+
+    // black & white color
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --ghost-ghost: #f5f5f5;
+
+    // border color
+    --border-500: rgba(255, 255, 255, 0.5);
+    --border-400: rgba(255, 255, 255, 0.4);
+    --border-300: rgba(255, 255, 255, 0.3);
+    --border-200: rgba(255, 255, 255, 0.2);
+    --border-100: rgba(255, 255, 255, 0.1);
+
+    // status colors
+    --danger-color: #d70000;
+    --danger-hover-color: #b80909;
+
+    --success-color: #28b080;
+    --success-hover-color: #1f8b5f;
+
+    --orange-color: #d97216;
+    --orange-hover-color: #be6516;
+
+    // tooltip border
+    --tooltip-border: #e1e1e1;
+
+    // font size color
+    --fs-xl: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+    --fs-lg: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+    --fs-md: clamp(1.125rem, 1.075rem + 0.25vw, 1.375rem);
+    --fs-base: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+    --fs-sm: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+    --fs-xs: clamp(0.8125rem, 0.7875rem + 0.125vw, 0.9375rem);
+    --fs-xxs: clamp(0.8125rem, 0.8rem + 0.0625vw, 0.875rem);
+
+    // border radius variables
+    --radius-full: 100%;
+    --radius-pill: 100px;
+    --radius-lg: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    --radius-md: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    --radius-sm: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+    --radius-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+
+    // transitions variables
+    --transition-very-slow: 0.8s ease-in-out;
+    --transition-slow: 0.6s ease;
+    --transition-normal: 0.4s ease;
+    --transition-fast: 0.2s ease-out;
+
+    // element height
+    --element-height-es: 36px;
+    --element-height-sm: 40px;
+    --element-height-md: 50px;
+    --element-height-lg: 58px;
+
+    --content-padding: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
+
+    // header variables
+    --header-height: 100px;
+
+    @media (width < 1600px) {
+        --header-height: 140px;
+    }
+
+    @media (width < 992px) {
+        --header-height: 195px;
+    }
+
+    @media (width < 768px) {
+        --header-height: 180px;
+    }
+
+    @media (width < 575px) {
+        --header-height: 165px;
+    }
+
+    // menubar height
+    --menubar-height: 100px;
+
+    // footer
+    --footer-mobile-height: 40px;
+
+    // z-index variables
+    --header-z-index: 100;
+    --mobile-bar-z-index: 100;
+    --page-loader-z-index: 999;
+
+    // mantine ui variables
+    --mantine-primary-color-filled: var(--primary-dark);
+}

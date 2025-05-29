@@ -1,0 +1,18 @@
+
+.game_search_box {
+     section {
+          border: 1px solid var(--border-100);
+     }
+}
+
+.game_search {
+     input {
+          font-size: var(--fs-base);
+          font-weight: 500;
+     }
+}
+
+.game_list {
+     max-height: 600px;
+     overflow-y: auto;
+}
