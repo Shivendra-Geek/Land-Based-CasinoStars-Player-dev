@@ -4,7 +4,7 @@ import SendToSupport from '@/components/common/send-to-support';
 import SortBtn from '@/components/common/table/sort-btn';
 import VideosData from '@/components/common/videos-data';
 import { dateFormat } from '@/lib/utils/date';
-import { framesVideoData } from '@/lib/utils/frames-video';
+import { framesVideoData } from '@/lib/utils/frames-video'
 import { Badge, Space, Table } from '@mantine/core';
 
 export const TableRow = ({ images, videos, uniqueId, item }) => {
